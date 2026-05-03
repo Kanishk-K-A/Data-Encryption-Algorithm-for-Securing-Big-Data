@@ -3,6 +3,8 @@
 ---
 ## Overview
 
+⚠️ This project is currently a work in progress.
+
 This project simulates a secure Hadoop-like environment using Python, demonstrating how data can be safely stored and retrieved using encryption, key management, and user authentication.
 
 It implements a simplified version of:
@@ -135,10 +137,3 @@ CRYPTO/
 2. KMS decrypts EDEK → DEK
 3. File decrypted using DEK
 4. Output saved as `decrypted_<filename>`
-
----
-
-## Work in Progress
-
-This project is currently a work in progress and is intended for learning and demonstration purposes.
-
