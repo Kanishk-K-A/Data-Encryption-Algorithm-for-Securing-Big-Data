@@ -65,7 +65,7 @@ It implements a simplified version of:
 ## Project Structure
 
 ```
-CRYPTOpro/
+CRYPTO/
 │
 ├── hdfs_storage/            # Simulated distributed storage
 ├── main.py                  # Main program (core logic)
