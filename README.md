@@ -1,19 +1,18 @@
 # Data-Encryption-Algorithm-for-Securing-Big-Data
-# 🔐 Secure HDFS Encryption System (CryptoPro)
+# Secure HDFS Encryption System 
+## Overview
 
-## 📌 Overview
-
-This project simulates a **secure Hadoop-like environment** using Python, demonstrating how data can be safely stored and retrieved using encryption and key management techniques.
+This project simulates a secure Hadoop-like environment using Python, demonstrating how data can be safely stored and retrieved using encryption and key management techniques.
 
 It implements a simplified version of:
 
-* **HDFS (Hadoop Distributed File System)**
-* **KMS (Key Management Server)**
+* HDFS (Hadoop Distributed File System)
+* KMS (Key Management Server)
 * Secure file upload/download with encryption
 
 ---
 
-## 🚀 Features
+## Features
 
 * Simulated HDFS storage system (`hdfs_storage/`)
 * Secure file upload & download
@@ -25,14 +24,14 @@ It implements a simplified version of:
 
 ---
 
-## 🔐 Security Implementation
+## Security Implementation
 
-### 🔹 Encryption Approach
+### Encryption Approach
 
-* **Symmetric Encryption (Fernet / AES-based)** used to encrypt file data
-* **Asymmetric Encryption (RSA)** used to encrypt the DEK (Data Encryption Key)
+* Symmetric Encryption (Fernet / AES-based) used to encrypt file data
+* Asymmetric Encryption (RSA) used to encrypt the DEK (Data Encryption Key)
 
-### 🔹 Key Flow
+### Key Flow
 
 * DEK (Data Encryption Key) → encrypts file
 * RSA → encrypts DEK → becomes EDEK
@@ -40,20 +39,20 @@ It implements a simplified version of:
 
 ---
 
-## 🧩 System Components
+## System Components
 
-### 1️⃣ KMS (Key Management Server)
+### KMS (Key Management Server)
 
 * Generates DEK
 * Encrypts DEK using RSA
 * Decrypts DEK when required
 
-### 2️⃣ HDFS (Simulation)
+### HDFS (Simulation)
 
 * Stores encrypted files in `hdfs_storage/`
 * Stores EDEK in `metadata.json`
 
-### 3️⃣ Client
+### Client
 
 * Handles:
 
@@ -63,7 +62,7 @@ It implements a simplified version of:
 
 ---
 
-## ⚙️ Project Structure
+## Project Structure
 
 ```
 CRYPTOpro/
@@ -77,9 +76,9 @@ CRYPTOpro/
 
 ---
 
-## 🔄 How It Works
+## Working
 
-### 📥 Upload Flow
+### Upload Flow
 
 1. User selects file
 2. KMS generates DEK
@@ -88,9 +87,7 @@ CRYPTOpro/
 5. Encrypted file stored in HDFS
 6. EDEK stored in metadata
 
----
-
-### 📤 Download Flow
+### Download Flow
 
 1. Encrypted file + EDEK fetched
 2. KMS decrypts EDEK → DEK
@@ -99,56 +96,10 @@ CRYPTOpro/
 
 ---
 
-## ▶️ How to Run
-
-```bash
-python main.py
-```
-
-Then choose:
-
-* 1 → Upload file
-* 2 → Download file
-* 3 → Exit
-
----
-
-## ⚠️ Work in Progress
+## Work in Progress
 
 This project is currently a **work in progress** and is intended for learning and demonstration purposes.
-
-### Planned Improvements:
-
-* Real distributed HDFS integration
-* Persistent key storage for KMS
-* User authentication system
-* Better error handling
-* Performance optimization
-* UI / API interface
-
----
-
-## 📌 Limitations
-
-* KMS keys are not persisted (regenerated each run)
-* Local file system used instead of real HDFS cluster
-* No authentication/authorization layer
-* Basic logging only
-
----
 
 ## 👨‍💻 Author
 
 Kanishk K A
-
----
-
-## 📄 Note
-
-This project demonstrates the concepts of:
-
-* Data at rest encryption
-* Key management
-* Secure file handling in distributed systems
-
-It is not intended for production use.
