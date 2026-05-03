@@ -100,6 +100,3 @@ CRYPTO/
 
 This project is currently a **work in progress** and is intended for learning and demonstration purposes.
 
-## 👨‍💻 Author
-
-Kanishk K A
